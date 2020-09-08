@@ -8,15 +8,19 @@ public class Sort{
     }
     public static void sort(int[] a,int b,int e){
         int i=b,j=e;
-        int k=a[b];
         if(b>=e)
             return;
         while(i<j){
-            while(a[i]<k&&i<e){
-                i++;
-            }
-            while(a[j]>=k&&j>b){
+            while(a[i]<=a[j]&&j>b){
                 j--;
+            }
+            if(i<j){
+                int temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+            while(a[j]>a[i]&&i<e){
+                i++;
             }
             if(i<j){
                 int temp=a[i];
