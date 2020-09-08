@@ -27,8 +27,10 @@ public class Homework1Sort {
     public static void main(String args[]) {
         int[] array = {83, 17, 93, 62, 45, 79, 25, 68, 21, 97, 76, 60, 86, 75, 16, 31, 2, 11, 49, 11, 93, 9, 39, 18, 89};
         myQuickSort(array, 0, array.length-1);
+        String output = "";
         for(int n : array) {
-            System.out.println(n + " ");
+            output += n + " ";
         }
+        System.out.println(output);
     }
 }
