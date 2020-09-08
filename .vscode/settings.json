@@ -1,0 +1,14 @@
+{
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "java.configuration.runtime": [
+        {
+            "name": "JavaSE-1.8",
+            "path": "C:/Program Files/AdoptOpenJDK/jdk-8.0.265.01-hotspot",
+        }
+    ]
+}
