@@ -1,5 +1,3 @@
-package java20homework.oofoundation;
-
 import java.util.ArrayList;
 
 public class GrandPa {
@@ -42,10 +40,10 @@ public class GrandPa {
 
     public void lineThemUp(QueueType type, Sort solution) {
         switch (type) {
-            case choreography:
+            case CHOREOGRAPHY:
                 solution.sort(this.calabashes, this.positions);
                 break;
-            case orchestration:
+            case ORCHESTRATION:
                 solution.sort(this, this.calabashes, this.positions);
                 break;
             default:
@@ -57,7 +55,7 @@ public class GrandPa {
         GrandPa grandPa = new GrandPa();
         grandPa.setPositions();
         grandPa.numberOff();
-        grandPa.lineThemUp(QueueType.choreography, new SortMethodB());
+        grandPa.lineThemUp(QueueType.CHOREOGRAPHY, new SortMethodB());
         grandPa.numberOff();
     }
 }

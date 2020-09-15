@@ -1,4 +1,6 @@
-package java20homework.oofoundation;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+import java.util.Random;
 
 public class Calabash {
     private int seniority;
@@ -34,17 +36,22 @@ public class Calabash {
     }
 
     public void pickPosition(int[] positions) {
-        //选择自己的位置
-        int index = (int) (Math.random() * 7);
-        while (positions[index] != -1) {
-            index = (int) (Math.random() * 7);
+        // 选择自己的位置
+        try {
+            Random rand = SecureRandom.getInstanceStrong();
+            int index = rand.nextInt(7);
+            while (positions[index] != -1) {
+                index = rand.nextInt(7);
+            }
+            positions[index] = this.seniority;
+            this.position = index;
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
         }
-        positions[index] = this.seniority;
-        this.position = index;
     }
 
     public void exchangePosition(Calabash brother, int[] positions) {
-        //和某位好兄弟交换位置
+        // 和某位好兄弟交换位置
         int tmpSelf = this.position;
         int tmpBro = brother.getPosition();
         positions[tmpSelf] = brother.getSeniority();

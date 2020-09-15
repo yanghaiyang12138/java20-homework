@@ -1,5 +1,3 @@
-package java20homework.oofoundation;
-
 import java.util.ArrayList;
 
 public interface Sort {
