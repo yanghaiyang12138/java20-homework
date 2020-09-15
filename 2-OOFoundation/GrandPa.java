@@ -44,8 +44,10 @@ public class GrandPa {
         switch (type) {
             case choreography:
                 solution.sort(this.calabashes, this.positions);
+                break;
             case orchestration:
                 solution.sort(this, this.calabashes, this.positions);
+                break;
             default:
                 break;
         }
