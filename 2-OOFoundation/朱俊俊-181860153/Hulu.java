@@ -1,5 +1,5 @@
 public class Hulu {
-    static String[] str = new String[]{"老大", "老二", "老三", "老四", "老五", "老六", "老七"};
+    static String[] name = new String[]{"老大", "老二", "老三", "老四", "老五", "老六", "老七"};
     int index;
 
     Hulu(int i) {
@@ -11,11 +11,17 @@ public class Hulu {
     }
 
     String getName() {
-        return str[index];
+        return name[index];
     }
 
-    void selfSort(Hulu[] hulus) {
-        hulus[index] = this;
+    int selfCompare(Hulu hulu) {
+        return index - hulu.index;
+    }
+
+    static void selfSwap(Hulu[] hulus, int i, int j) {
+        Hulu tmp = hulus[i];
+        hulus[i] = hulus[j];
+        hulus[j] = tmp;
     }
 
     void countOff() {
