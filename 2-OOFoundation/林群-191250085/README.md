@@ -8,9 +8,9 @@
 类`GrandPa`，用于创建Grandpa的实例  
 行为职责包括：比较两个葫芦娃之间的排名大小，交换两个葫芦娃在队列中的位置  
 
-抽象类`Sort`：作为排序算法的接口  
+抽象类`SortType`：作为排序算法的接口  
 
-类`BubbleSort`：继承类`Sort`，用于实现Orchestration和Choreography两种类型的冒泡排序算法     
+类`BubbleSort`：继承类`SortType`，用于实现Orchestration和Choreography两种类型的冒泡排序算法     
 
 
 类`HuluwaSort`：保存主方法入口，提供队列初始化方法`initialize`，实现葫芦娃随机站队后进行排序
