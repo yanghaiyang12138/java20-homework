@@ -1,6 +1,7 @@
 out/
 
 .vscode/
+.gitignore
 
 #eclipse ignore
 .settings/
