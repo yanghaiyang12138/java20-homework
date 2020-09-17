@@ -13,6 +13,11 @@ public class PlayGround {
         hulusGreeting();
         System.out.println("Initialization finished");
     }
+
+    public HuluBaby[] getHulus() {
+        return hulus;
+    }
+
     public void shuffleHuluBaby() {
         Collections.shuffle(Arrays.asList(hulus));
     }
@@ -20,9 +25,5 @@ public class PlayGround {
         for (int i = 0; i < hulus.length; i++) {
             hulus[i].greet();
         }
-    }
-    public void sortHuluBaby(HuluSorter.SortMode mode) {
-        HuluSorter sorter = new HuluSorter(mode);
-        sorter.quickSort(this.hulus);
     }
 }
