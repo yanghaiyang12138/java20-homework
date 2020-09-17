@@ -1,3 +1,5 @@
+import java.util.List;
+
 public interface SortStrategy {
-    public void sort(GrandFather f);
+    public void sort(List<CalabashBrother> queue);
 }

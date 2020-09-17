@@ -1,13 +1,9 @@
-public class CalabashBrother implements Comparable<CalabashBrother>{
-    String nickname;
+public class CalabashBrother extends Human implements Comparable<CalabashBrother>{
     int idx;
+
     CalabashBrother(String name, int idx) {
         this.nickname = name;
         this.idx = idx;
-    }
-
-    public void report() {
-        System.out.println(this.nickname);
     }
 
     @Override

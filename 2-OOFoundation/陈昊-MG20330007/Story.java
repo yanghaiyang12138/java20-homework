@@ -1,14 +1,21 @@
-import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class Story {
     private SortStrategy strategy;
     private GrandFather gfather;
+    private List<CalabashBrother> queue;
 
     public Story() {
+        // 故事开始爷爷出场
         gfather = new GrandFather();
-        System.out.println("Init queue: ");
-        gfather.echo();
-        System.out.println();
+        // 爷爷种葫芦，葫芦娃出场
+        queue = Arrays.asList(gfather.plantCalabsh());
+        // 葫芦娃随意站队
+        Collections.shuffle(queue);
+        echo("Init queue: ");
+        
     }
 
     public void setStrategy(SortStrategy strategy) {
@@ -16,40 +23,28 @@ public class Story {
     }
 
     public void start() {
-        this.strategy.sort(gfather);
         System.out.println();
-        System.out.println("After sort: ");
-        gfather.echo();
+        this.strategy.sort(queue);        
+        echo("After sort: ");
+    }
+
+    private void echo(String preIntro) {
+        System.out.println(preIntro);
+        for (var brother : queue) {
+            brother.reportName();
+        }
+        System.out.println();
+    }
+
+    public GrandFather getGrandFather() {
+        return gfather;
     }
 
     public static void main(String[] args) {
         var story = new Story();
-        Scanner scanner = new Scanner(System.in);
-        int opt;
-        SortStrategy strategy;
-        boolean redo = true;
-        while (redo) {
-            System.out.println("What strategy you want to use in sort process?");
-            System.out.println("[1]: Orchestration");
-            System.out.println("[2]: CalabashBrother");
-            opt = scanner.nextInt();
-            switch (opt) {
-                case 1:
-                    strategy = new Orchestration();
-                    redo = false;
-                    story.setStrategy(strategy);
-                    break;
-                case 2:
-                    strategy = new Choreography();
-                    redo = false;
-                    story.setStrategy(strategy);
-                    break;
-                default:
-                    System.out.println("Please enter legal input!");
-                    System.out.println();
-                    break;
-            }
-        }
+        StrategyFactory factory = new StrategyFactory(story);
+        SortStrategy strategy = factory.getStrategyFromInput();
+        story.setStrategy(strategy);
         story.start();
     }
 }
