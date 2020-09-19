@@ -1,8 +1,8 @@
 # 171830583 穆朋朋 homework2思路
-首先是类的设计：涉及的基本对象有葫芦娃和爷爷，所以需要设计葫芦娃类Calabash和爷爷类Grandpa以及完成创建、调度等操作的主类CalabashBrothersSort；
-Calabash类：成员变量有color记录该对象的颜色；为了之后的Choreography形式的排序，使用rank变量记录该对象在队列中期望的排名；
-Grandpa类：没有成员变量，有一个对七葫芦娃排序的方法；
-CalabashBrothersSort类：主类，在其main()函数创建七葫芦娃的ArrayList并打乱顺序，分别使用3种排序方法进行排序；
+首先是类的设计：涉及的基本对象有葫芦娃和爷爷，所以需要设计葫芦娃类Calabash和爷爷类Grandpa以及完成创建、调度等操作的主类CalabashBrothersSort.  
+Calabash类：成员变量有color记录该对象的颜色；为了之后的Choreography形式的排序，使用rank变量记录该对象在队列中期望的排名；  
+Grandpa类：没有成员变量，有一个对七葫芦娃排序的方法；  
+CalabashBrothersSort类：主类，在其main()函数创建七葫芦娃的ArrayList并打乱顺序，分别使用3种排序方法进行排序；  
 
 1. 用算法排序：实现简单的选择排序；
 2. Orchestration形式的排序：创建爷爷对象，调用其方法对ArrayList排序；
