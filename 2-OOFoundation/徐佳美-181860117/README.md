@@ -46,7 +46,7 @@
 
 ​						2.可以通过接口获得其它葫芦娃的名字和年纪。
 
-​                   	 3.可以通过compare方法比较和另一个葫芦娃的大小
+​           3.可以通过compare方法比较和另一个葫芦娃的大小
 
 ​						4.通过swap方法换位
 
@@ -60,13 +60,13 @@
 
 ​	在目录下：
 
-​	javac OrchestrationWorld.java
+​	javac Orchestration.java
 
-​	java OrchestrationWorld
+​	java Orchestration
 
-​	javac ChoreographyWorld.java
+​	javac Choreography.java
 
-​	java ChoreographyWorld
+​	java Choreography
 
 
 
