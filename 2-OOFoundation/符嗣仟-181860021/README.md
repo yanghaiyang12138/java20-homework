@@ -49,8 +49,15 @@ public void GrandpaSort(Calabash[] grandsons){
 而葫芦娃相互协作完成排序，通过葫芦娃类自身函数发出位置比较，并自己产生swap指令完成位置调换。
 
 ### 函数调用结果
-
-![1600610364751](C:\Users\46354\AppData\Roaming\Typora\typora-user-images\1600610364751.png)
+`Orchesration world:
+打乱葫芦娃顺序
+二娃 四娃 六娃 五娃 七娃 大娃 三娃  
+大娃 二娃 三娃 四娃 五娃 六娃 七娃  
+choreography world:
+打乱葫芦娃顺序
+四娃 六娃 大娃 五娃 三娃 七娃 二娃  
+大娃 二娃 三娃 四娃 五娃 六娃 七娃  
+`
 
 
 
