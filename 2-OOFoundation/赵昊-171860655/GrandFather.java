@@ -1,9 +1,9 @@
 public class GrandFather {
     private static final int sortMode = 1;
     public void SortBrothers(CalabashBrother[] brothersArray){
-        System.out.println("爷爷指挥排序，排序前报数：");
+        System.out.println("爷爷指挥排序，排序前点名：");
         for (CalabashBrother calabashBrother : brothersArray)
-            calabashBrother.numberOff();
+            System.out.print(calabashBrother.getName()+" ");
         System.out.println();
         switch (sortMode){
             case 1:selectSort(brothersArray);System.out.println("使用选择排序");break;
@@ -11,9 +11,9 @@ public class GrandFather {
             case 3:quickSort(brothersArray,0,brothersArray.length-1);System.out.println("使用快速排序");break;
             default:System.out.println("不存在的排序模式");
         }
-        System.out.println("排好序后报数：");
+        System.out.println("排好序后点名：");
         for (CalabashBrother calabashBrother : brothersArray)
-            calabashBrother.numberOff();
+            System.out.print(calabashBrother.getName()+" ");
         System.out.println();
     }
     private void quickSort(CalabashBrother[] brothersArray,int left,int right) {
