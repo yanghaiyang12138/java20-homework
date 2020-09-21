@@ -94,7 +94,7 @@ public class Queue {
     }
 ```
 
-## orchestration sort 过程
+## 3.orchestration sort 过程
     - 初始化葫芦娃
     - 让所有葫芦娃进入队列
     - 老爷爷对队列进行排序
@@ -109,7 +109,7 @@ public class Queue {
     grandpa.sort(que);
 ```
 
-## 运行结果
+## 4.运行结果
 
 ```
 The initial sequence is generated randomly.
