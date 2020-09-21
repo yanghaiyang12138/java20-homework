@@ -21,15 +21,15 @@ public class GrandFather {
             return;
         int i = left;
         int j = right;
-        CalabashBrother key = brothersArray[left];//选择第一个数为key
+        CalabashBrother key = brothersArray[left];
         while(i<j) {
-            while(i<j && brothersArray[j].getRank()>=key.getRank())//从右向左找第一个小于key的值
+            while(i<j && brothersArray[j].getRank()>=key.getRank())
                 j--;
             if(i<j) {
                 brothersArray[i] = brothersArray[j];
                 i++;
             }
-            while(i<j && brothersArray[i].getRank()<key.getRank())//从左向右找第一个大于key的值
+            while(i<j && brothersArray[i].getRank()<key.getRank())
                 i++;
             if(i<j) {
                 brothersArray[j] = brothersArray[i];
@@ -37,8 +37,8 @@ public class GrandFather {
             }
         }
         brothersArray[i] = key;
-        quickSort(brothersArray, left, i-1);//继续排左部分，递归调用
-        quickSort(brothersArray, i+1, right);//继续排右部分，递归调用
+        quickSort(brothersArray, left, i-1);
+        quickSort(brothersArray, i+1, right);
     }
 
     public void selectSort(CalabashBrother[] brothersArray){
