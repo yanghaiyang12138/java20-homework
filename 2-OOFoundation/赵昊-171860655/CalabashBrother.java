@@ -17,6 +17,9 @@ public class CalabashBrother {
     public int getRank(){
         return rank;
     }
+    public String getName(){
+        return name;
+    }
     public void setRank(int rank){
         this.rank = rank;
     }
