@@ -55,6 +55,7 @@ package "cn.edu.nju.hulu"{
 
     AbstractSorter ^-- InsertSorter
     AbstractSorter ^-- QuickSorter
+    Sortable <-- AbstractSorter
     Sortable ^.. HuLuBrothers
     HuLuBrothers *-- HuLuWa
     Grandpa o-- Sortable
