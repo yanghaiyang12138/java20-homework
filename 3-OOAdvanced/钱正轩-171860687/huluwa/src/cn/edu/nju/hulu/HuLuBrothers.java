@@ -6,8 +6,13 @@ import java.util.Collections;
 import java.util.List;
 
 public class HuLuBrothers implements Sortable {
-    private static final int HULUWA_NUM = 7;
-    private static final HuLuWa BOUND = new HuLuWa(Order.NULL, "空");
+    private static final int HULUWA_NUM;
+    private static final HuLuWa BOUND;
+
+    static{
+        HULUWA_NUM = 7;
+        BOUND = new HuLuWa(Order.NULL, "空");
+    }
 
     private static HuLuBrothers huLuBrothers;
     private final List<HuLuWa> hulu;
