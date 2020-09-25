@@ -5,8 +5,7 @@
 其还具有`swapWith()`方法，用以和另一个葫芦娃交换位置。  
 Grandpa类中具有私有方法`compareHuluwa`、`swapHuluwa`，通过委托调用葫芦娃的方法实现对其的比较和交换。具有公共方法`sortHuluwa`，将比较、交换的方法封装，在排序时调用此方法即可。  
 类图如下：  
-![](http://www.plantuml.com/plantuml/png/TO-_JiCm4CRtUmgFGI4y0KCH0sNA0183OhXUZZHWNopxJ8VGTyT9ZMG6Hdz_Vlvk5nM39cV18ttYoARlxuOl5EBXXeuOa9H3N62V78gv_Uuwyn1G1e-rj4ysdH38OepbOIRdBJiMZUP-TZwZ3fRX32MrjHTebwYe4vtD96feJgBGFccOP3I2Zg4bjBQvMeivmU4TYIjW9j3suEUvwGyVJBfbwoaviy8bEMZZ2VtBfCVcObNPSbOzgKXvMbQ46BhorwLS6DVcbzMjz7-yDiv1_tYlRraTMHyBVJjonp8aPty0)
-  
+![](http://www.plantuml.com/plantuml/png/RL7BJiCm4BpxAtnC5S8NLAYe1ue4wW4a3eZ3rjac1ZyYUzqAXVuxSMDNhjIZPsPdnhihJ-0eQCNO0E87EkJRxMDx02EmlHSzE124pezi4pGOllnh6lxamBG3bD0cg7049XHudnvSwa6XHaEUhwqUmC5E8Jknh8hJ8wj7Jq1IdBWqn8KDXbZzHawQZXlGoEg3bIqNe5IrYDEJ3DqU11Qkayqy7G5yjzLszus2elwgKzAPe9EjFyBm8QclPhuOI9yi2oQ8IpCXHY1hYj3P8FdSyUpNN69k2t8Fw-XAyFarKJcmGtfEcN47Ds-bGPenbtyzF-gvE3ydHBxASGff7HTwli44laXFopduWGk7GFa_YsB_2Ih55xgt3ctdOEX_Rmfy7_PxXP6A_7oQ4rkXQODM_m00)
 ## 2 利用静态块实现单例模式    
 根据需求，爷爷类的实例在同一世界中应当只存在一个，故采用单例模式。爷爷类中具有静态变量`Grandpa instance`，静态块中将其初始化。在调用爷爷类实例时，使用方法`Grandpa.getInstance()`即可。同时该单例模式是线程安全的。  
 ## 3 利用静态变量和构造器实现计数  
