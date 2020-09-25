@@ -15,7 +15,7 @@
 数据职责有：保存设定队列长度的私有静态变量`lengthOfQueue`，保存葫芦娃名字的静态String类数组`huluwaName`      
 行为职责有：提供队列初始化方法`initialize()`，实现程序入口`main()`
 
-### 使用多态思想实现排序：
+### 使用多态的思想实现排序：
 类`SortAlgoritmByPolymorphism`：作为所有排序算法的父类，保存有用于子类覆写的方法`orchestration()`和`choreography()`
 
 类`BubbleSortByPolymorphism`：继承类`SortAlgorithmByPolymorphism`，用于实例化排序算法
