@@ -4,7 +4,7 @@
 
 ### 设计思路
 
-`Calabash`类保存葫芦娃的信息，`Vine`类表示生出葫芦娃的葫芦藤，`Grandpa`和`CalabashTogether`实现了`Sorter`接口，分别完成了以**orchestration**和**choreography**两种形式的排序。项目位于包`package calabash`下。
+`Calabash`类保存葫芦娃的信息，`Vine`类表示生出葫芦娃的葫芦藤，`Grandpa`和`CalabashTogether`实现了`Sorter`接口，分别完成了以**orchestration**和**choreography**两种形式的排序。项目位于包`cn.edu.nju.zjj.java03`下。
 
 
 
